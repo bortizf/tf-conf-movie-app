@@ -16,12 +16,12 @@ resource "aws_security_group" "jenkins-sg" {
       prefix_list_ids  = null
     },
     {
-      cidr_blocks      = ["67.73.245.211/32"]
-      description      = "Access Jenkins port from my machines"
+      cidr_blocks      = ["67.73.245.211/32", "192.30.252.0/22", "185.199.108.0/22", "140.82.112.0/20", "143.55.64.0/20"]
+      description      = "Access Jenkins port from my machines and open github webhooks"
       from_port        = 8080
       protocol         = "TCP"
       to_port          = 8080
-      ipv6_cidr_blocks = null
+      ipv6_cidr_blocks = ["2a0a:a440::/29", "2606:50c0::/32"]
       prefix_list_ids  = null
       self             = null
       security_groups  = null
