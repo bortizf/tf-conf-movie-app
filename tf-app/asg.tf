@@ -1,9 +1,9 @@
 # ASG of front instances
 resource "aws_autoscaling_group" "front-asg" {
   name             = "movie-front-asg-brayan.ortiz"
-  max_size         = 2
+  max_size         = 1
   min_size         = 1
-  desired_capacity = 2
+  desired_capacity = 1
 
   launch_template {
     id      = aws_launch_template.front-lt.id
@@ -24,9 +24,9 @@ resource "aws_autoscaling_attachment" "front-asg" {
 # ASG of back instances
 resource "aws_autoscaling_group" "back-asg" {
   name             = "movie-back-asg-brayan.ortiz"
-  max_size         = 2
+  max_size         = 1
   min_size         = 1
-  desired_capacity = 2
+  desired_capacity = 1
 
   launch_template {
     id      = aws_launch_template.back-lt.id
