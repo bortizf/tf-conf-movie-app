@@ -9,7 +9,7 @@ cat > /tmp/main.yml << EOF
   
   vars:
     nodejs_version: "14.x"
-    url_repo: "https://github.com/bortizf/movie-analyst-ui.git"
+    url_repo: "https://github.com/bortizf/movie-app-ui"
     app_dir: "/app/movie-ui"
 
   tasks:
